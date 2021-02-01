@@ -62,24 +62,25 @@ else{
 echo"
     <table width=80% align='center'>
         <tr>
-            <td colspan=13><a href='../../index.php'>HOME</a></td>
+            <td colspan=13><a href='../../index.php'>HOME</a>
         </tr>
         <tr>
             <td colspan=13 align='center'><h2>DATA PINJAMAN</h2><hr></td>
         </tr>
-        <th width=5%>No</th>
-        <th>Nomor Pinjaman</th>
-        <th>Tanggal</th>
-        <th>No Anggota</th>
-        <th>Nama</th>
-        <th>L/P</th>
-        <th>Lama</th>
-        <th>Jumlah</th>
-        <th>Bunga(%)</th>
-        <th>Jumlah <br>Bayar</th>
-        <th>Jumlah <br>Cicilan</th>
-        <th>Sisa</th>
-        <th>Hapus</th>
+            <th width=5%>No</th>
+            <th>Nomor Pinjaman</th>
+            <th>Tanggal</th>
+            <th>No Anggota</th>
+            <th>Nama</th>
+            <th>L/P</th>
+            <th>Lama</th>
+            <th>Jumlah</th>
+            <th>Bunga(%)</th>
+            <th>Jumlah <br>Bayar</th>
+            <th>Jumlah <br>Cicilan</th>
+            <th>Sisa</th>
+            <th><a href='tambah.php'>Tambah Data</a></th>
+            <th>Detail</th>
         <tr>";
     $sql = "SELECT a.*, b.namaanggota, b.jk 
             FROM pinjaman_header as a 
@@ -108,8 +109,9 @@ echo"
                 <td align=center>".number_format($jml_cicilan)."</td>
                 <td align=center>".number_format($sisa)."</td>
                 <td align=center>
-                <a href='javascript:deleteRow(\"{$brows['id_pinjam']}\")'>Hapus</a>
-                </td>
+                    <a href='javascript:deleteRow(\"{$brows['id_pinjam']}\")'>Hapus</a>
+                </td>                
+                <td><a href='detail.php?id_pinjaman=$brows[id_pinjam]'>DETAIL</a></td>
             </tr>";
         $no++;
         $gtotal = $gtotal+$brows['jumlah'];        

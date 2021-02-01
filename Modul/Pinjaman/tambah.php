@@ -3,7 +3,7 @@ include'../../koneksi.php';
 $athallah1 = "SELECT * FROM anggota";
 $athallah2 = mysqli_query($koneksi, $athallah1);
 echo"
-    <form action='prosesinput.php' method='post'>
+    <form action='prosesinput.php' method='POST'>
     <table width=60% align='center'>
         <tr>
             <td colspan=2><a href='viewpinjaman.php'>BATAL</a></td>
@@ -13,12 +13,12 @@ echo"
         </tr>
         <tr>
             <td>NOMOR PINJAMAN</td>
-            <td><input type='text' name='noPinjaman'></td>
+            <td><input type='text' name='nomorpinjaman'></td>
         </tr>
         <tr>
-            <td>NOMOR ANGGOTA</td>
+            <td>NAMA ANGGOTA</td>
             <td>
-            <select id='anggota'>";
+            <select name='nomoranggota'>";
             while($athallah3=mysqli_fetch_array($athallah2)){
                 echo"
                 <option value='$athallah3[noanggota]'>$athallah3[namaanggota]</option>";
@@ -34,7 +34,7 @@ echo"
         <tr>
             <td>LAMA PINJAMAN</td>
             <td>
-                <select id='lama'>
+                <select name='lama'>
                     <option value='6'>6</option>
                     <option value='12'>12</option>
                     <option value='24'>24</option>
@@ -44,7 +44,7 @@ echo"
         <tr>
             <td>BUNGA</td>
             <td>
-                <select id='lama'>
+                <select name='bunga'>
                     <option value='1'>1</option>
                     <option value='2'>2</option>
                     <option value='3'>3</option>
