@@ -21,7 +21,7 @@ echo"
                 </ol>
                 <ol>Transaksi
                     <ol><a href='Modul/Pinjaman/viewpinjaman.php'>Pinjaman</a></ol>
-                    <ol>Bayar Pinjaman</ol>
+                    <ol><a href='Modul/Pinjaman/caridatapinjam.php'>Bayar Pinjaman</a></ol>
                     <ol>Simpanan</ol>
                     <ol>Pengembalian Simpanan</ol>
                 </ol>

@@ -58,6 +58,7 @@ echo "
         <th>Total</th>
         <th>Tanggal Bayar</th>
         <th>Jumlah Bayar</th>
+        <th>Keterangan</th>
     </tr>";
 $athallah2 = "SELECT * FROM pinjaman_detail $where ORDER BY id_pinjam, cicilan";
 $query = mysqli_query($koneksi, $athallah2);
@@ -75,6 +76,7 @@ while($rows=mysqli_fetch_array($query)){
         <td align='right'>".number_format($total)."</td>
         <td align='center'>$rows[tgl_bayar]</td>
         <td align='center'>$rows[jumlah_bayar]</td>
+        <td align='center'><a href='bayarpinjaman.php?no=$rows[id_pinjam]&cicilan=$rows[cicilan]'>Bayar Pinjaman</a></td>
     </tr>";
     $no++; $gtotal = $gtotal + $total;
 }
