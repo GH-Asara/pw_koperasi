@@ -22,7 +22,7 @@ echo"
                 <ol>Transaksi
                     <ol><a href='Modul/Pinjaman/viewpinjaman.php'>Pinjaman</a></ol>
                     <ol><a href='Modul/Pinjaman/caridatapinjam.php'>Bayar Pinjaman</a></ol>
-                    <ol>Simpanan</ol>
+                    <ol><a href='Modul/Simpanan/viewsimpanan.php'>Simpanan</a></ol>
                     <ol>Pengembalian Simpanan</ol>
                 </ol>
                 <ol>Laporan
